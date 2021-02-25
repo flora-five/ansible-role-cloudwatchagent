@@ -13,10 +13,12 @@
       file:
         path: /root/.aws
         state: directory
+        mode: 0644
 
     - name: Create aws config file
       copy:
         dest: /root/.aws/config
+        mode: 0644
         content: |
           [AmazonCloudWatchAgent]
           region = us-west-1
