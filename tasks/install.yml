@@ -42,4 +42,5 @@
 - name: Install CloudWatch Agent (RedHat)
   yum:
     name: /tmp/{{ cwa_pkg_file }}
+    disable_gpg_check: True
   when: ansible_os_family == "RedHat"
