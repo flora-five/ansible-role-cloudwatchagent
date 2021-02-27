@@ -9,6 +9,8 @@
     set -o pipefail
     gpg --with-colons --with-fingerprint /tmp/amazon-cloudwatch-agent.gpg |
     awk -F: '$1 == "fpr" {print $10}'
+  args:
+    executable: /bin/bash
   register: cwa_gpg_verify
   changed_when: false
   failed_when: cwa_gpg_verify.stdout != cwa_gpg_fingerprint
