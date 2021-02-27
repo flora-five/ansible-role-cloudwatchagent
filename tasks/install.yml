@@ -1,4 +1,16 @@
 ---
+- name: Install gnupg-agent
+  apt:
+    name: gnupg-agent
+    update_cache: yes
+  when: ansible_os_family == "Debian"
+
+- name: Install gnupg2
+  yum:
+    name: gnupg2
+    update_cache: yes
+  when: ansible_os_family == "RedHat"
+
 - name: Download CloudWatch Agent GPG public key
   get_url:
     url: "{{ cwa_gpg_url }}/amazon-cloudwatch-agent.gpg"
