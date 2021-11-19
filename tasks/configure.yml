@@ -10,6 +10,8 @@
       /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl
       -a fetch-config -c file:%s -m {{ cwa_mode }}
   notify: restart cwa
+  when: |
+    cwa_config_map.keys() | length > 0
   with_items:
     - amazon-cloudwatch-agent.json
 

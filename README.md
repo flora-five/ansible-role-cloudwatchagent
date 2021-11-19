@@ -77,7 +77,7 @@ cwa_config_map:
         measurement:
           - name: mem_used_percent
 ```
-The CloudWatch Agent configuration. This YAML map will be converted to JSON and printed to the amazon-cloudwatch-agent.json file in `cwa_config_dir`. See [CloudWatch agent configuration documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html) for details of all configuration options.
+The CloudWatch Agent configuration. This YAML map will be converted to JSON and printed to the amazon-cloudwatch-agent.json file in `cwa_config_dir`. See [CloudWatch agent configuration documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html) for details of all configuration options. If this map is empty, then the amazon-cloudwatch-agent.json file in `cwa_config_dir` is not created.
 
 Dependencies
 ------------
