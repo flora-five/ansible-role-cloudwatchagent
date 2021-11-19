@@ -18,6 +18,7 @@
     name: amazon-cloudwatch-agent
     state: started
     enabled: true
+  when: cwa_start | bool
 
 - name: Configure log rotation
   copy:

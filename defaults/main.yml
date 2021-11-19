@@ -6,6 +6,8 @@ cwa_mode: ec2
 
 cwa_logfile: /opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log
 
+cwa_start: true
+
 cwa_config_dir: /opt/aws/amazon-cloudwatch-agent/etc
 cwa_config_map:
   metrics:

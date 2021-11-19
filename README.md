@@ -55,6 +55,11 @@ cwa_mode: ec2
 The mode in which to to run the agent. Can be `ec2`, `onPremise` or `auto`.
 
 ```
+cwa_start: true
+```
+Enable and start the service.
+
+```
 cwa_logfile: /opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log
 ```
 The file into which events will be logged. Ensure it is specified in `cwa_config_map.agent.logfile` if amended from the default.
